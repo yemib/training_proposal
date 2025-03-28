@@ -7,20 +7,23 @@
     <title>ONETOUCH TRAIING PROPOSAL.cdr</title>
     <meta name="author" content="olasunkanmi oluyemi" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
-<link rel="icon" href="icon.png" type="image/x-icon" />
+    <link rel="icon" href="icon.png" type="image/x-icon" />
 
 </head>
 
 <body>
-    <div   style="position:fixed;">
-    <a download="ONETOUCH_TRAIING_PROPOSAL.pdf" href="/ONETOUCH_TRAIING_PROPOSAL.pdf" 
-    style="display: inline-block; padding: 10px 20px; 
+    <div style="position:fixed;">
+        <a download="ONETOUCH_TRAIING_PROPOSAL.pdf" href="/ONETOUCH_TRAIING_PROPOSAL.pdf" style="display: inline-block; padding: 10px 20px; 
     background-color: #ff0000; color: white; text-decoration: none; 
-    border-radius: 5px; font-size: 16px; text-align: center;border: black solid 1px;"><strong> Download PDF File </strong></a>
+    border-radius: 5px; font-size: 16px; text-align: center;border: black solid 1px;"><strong> Download PDF File
+            </strong></a>
 
-</div>
+            Contact Us On  : <a href="https://wa.me/23408160492362" target="_blank" style="display: inline-block; padding: 10px 20px;
+    background-color: #25D366; color: white; text-decoration: none;"  >  08160492362 </a>
 
-<div id="loading-spinner" style="
+    </div>
+
+    <div id="loading-spinner" style="
     position: fixed;
     top: 0;
     left: 0;
@@ -36,57 +39,57 @@
     font-weight: bold;
     z-index: 9999;
 ">
-    
-    <p>Loading DOCUMENT, please wait...</p>
-</div>
-<div id="pdf-container"></div>
 
-<script>
-    var url = 'ONETOUCH_TRAIING_PROPOSAL.pdf'; // Replace with your actual PDF URL
+        <p>Loading DOCUMENT, please wait...</p>
+    </div>
+    <div id="pdf-container"></div>
 
-    var loadingTask = pdfjsLib.getDocument(url);
-    var spinner = document.getElementById('loading-spinner'); // Get the loading div
-    var container = document.getElementById('pdf-container');
+    <script>
+        var url = 'ONETOUCH_TRAIING_PROPOSAL.pdf'; // Replace with your actual PDF URL
 
-    loadingTask.promise.then(function(pdf) {
-        let totalPages = pdf.numPages;
-        let pagesLoaded = 0;
+        var loadingTask = pdfjsLib.getDocument(url);
+        var spinner = document.getElementById('loading-spinner'); // Get the loading div
+        var container = document.getElementById('pdf-container');
 
-        for (let pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
-            pdf.getPage(pageNumber).then(function(page) {
-                var scale = 2; // High-quality rendering
-                var viewport = page.getViewport({ scale: scale });
+        loadingTask.promise.then(function (pdf) {
+            let totalPages = pdf.numPages;
+            let pagesLoaded = 0;
 
-                var canvas = document.createElement('canvas');
-                canvas.style.display = 'block';
-                canvas.style.margin = '10px auto';
-                container.appendChild(canvas);
+            for (let pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+                pdf.getPage(pageNumber).then(function (page) {
+                    var scale = 2; // High-quality rendering
+                    var viewport = page.getViewport({ scale: scale });
 
-                var context = canvas.getContext('2d');
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
+                    var canvas = document.createElement('canvas');
+                    canvas.style.display = 'block';
+                    canvas.style.margin = '10px auto';
+                    container.appendChild(canvas);
 
-                var renderContext = {
-                    canvasContext: context,
-                    viewport: viewport
-                };
+                    var context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
 
-                page.render(renderContext).promise.then(function() {
-                    pagesLoaded++;
+                    var renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
 
-                    // Hide the spinner when all pages are loaded
-                    if (pagesLoaded === totalPages) {
-                        setTimeout(() => {
-                            spinner.style.transition = 'opacity 0.5s ease';
-                            spinner.style.opacity = '0';
-                            setTimeout(() => spinner.style.display = 'none', 500);
-                        }, 300); // Small delay for smoother transition
-                    }
+                    page.render(renderContext).promise.then(function () {
+                        pagesLoaded++;
+
+                        // Hide the spinner when all pages are loaded
+                        if (pagesLoaded === totalPages) {
+                            setTimeout(() => {
+                                spinner.style.transition = 'opacity 0.5s ease';
+                                spinner.style.opacity = '0';
+                                setTimeout(() => spinner.style.display = 'none', 500);
+                            }, 300); // Small delay for smoother transition
+                        }
+                    });
                 });
-            });
-        }
-    });
-</script>
+            }
+        });
+    </script>
 
 
 
