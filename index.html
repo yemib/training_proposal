@@ -1,0 +1,59 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ONETOUCH TRAIING PROPOSAL.cdr</title>
+    <meta name="author" content="olasunkanmi oluyemi" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
+
+</head>
+
+<body>
+    <div   style="position:fixed;">
+    <a href="/ONETOUCH_TRAIING_PROPOSAL.pdf" 
+    style="display: inline-block; padding: 10px 20px; 
+    background-color: #ff0000; color: white; text-decoration: none; 
+    border-radius: 5px; font-size: 16px; text-align: center;border: black solid 1px;"><strong> Download PDF File </strong></a>
+
+</div>
+  <!--   <h1 class="s1">ONETOUCH TRAINING PROPOSAL</h1> -->
+  <div id="pdf-container"></div>
+
+
+ <!--    <iframe src="ONETOUCH TRAIING PROPOSAL.pdf" style="width: 100%; height: 100vh; border: none;"></iframe> -->
+ <script>
+    var url = 'ONETOUCH_TRAIING_PROPOSAL.pdf'; // Replace with your actual PDF URL
+
+    var loadingTask = pdfjsLib.getDocument(url);
+    loadingTask.promise.then(function(pdf) {
+        var container = document.getElementById('pdf-container');
+
+        for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+            pdf.getPage(pageNumber).then(function(page) {
+                var scale = 2;
+                var viewport = page.getViewport({ scale: scale });
+
+                var canvas = document.createElement('canvas');
+                canvas.style.display = 'block';
+                canvas.style.margin = '10px auto';
+                container.appendChild(canvas);
+
+                var context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                var renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+                page.render(renderContext);
+            });
+        }
+    });
+</script>
+
+</body>
+
+</html>
