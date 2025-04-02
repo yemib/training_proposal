@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Skill Acquisition Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ff0000 ;
+            font-family: 'Poppins', sans-serif;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            font-weight: bold;
+            color: red;
+        }
+        .bank-details {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container"> 
+            <div align="center"> <a  href="/"> <img src="icon.png" style="display: block; margin: 0 auto;"/> </a> </div>
+            <h3 class="header">MEDIA SKILL ACQUISITION</h3>
+            <p class="text-center">Registration Form</p>
+            
+            <div class="bank-details">
+                <h5>Bank Payment Details</h5>
+                <p><strong>Bank Name:</strong> UBA Bank</p>
+                <p><strong>Account Name:</strong> Obafemi Emmmanuel</p>
+                <p><strong>Account Number:</strong> 2215314439 </p>
+                <p><strong>Amount:</strong> NGN 1000</p>
+            </div>
+            
+            <form  method="post"   action="submit.php"  enctype="multipart/form-data" >
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input required  name="full_name" type="text" class="form-control">
+                </div>
+                
+                <div class="mb-3 row">
+                    <div class="col">
+                        <label class="form-label">Date of Birth</label>
+                        <input  name="date_of_birth" type="date" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label class="form-label">Gender</label><br>
+                        <input     value="Male"   type="radio" name="gender"> Male
+                        <input   value="Female" type="radio" name="gender"> Female
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Address</label>
+                    <input   name="address" type="text" class="form-control">
+                </div>
+                
+                <div class="mb-3 row">
+                    <div class="col">
+                        <label class="form-label">Phone Number</label>
+                        <input required  name="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label class="form-label">Email Address</label>
+                        <input required  name="email" type="email" class="form-control">
+                    </div>
+                </div>
+              
+                <h5>Media Skills & Interest</h5>
+                <div class="mb-3">
+                    <label class="form-label">Do you have prior experience in media?</label>
+                    <input  value="Yes" type="radio" name="experience"  id="yese">  <label for="yese"> Yes</label> 
+                    <input  value="No" type="radio" name="experience"  id="noe">  <label for="noe"> No </label> 
+                </div>  
+                
+                <div class="mb-3">
+                    <label class="form-label">If yes, please specify</label>
+                    <textarea    name="experience_details" type="text" class="form-control"></textarea> 
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Which media skills are you interested in learning?</label><br>
+                    <input name="skills[]"  type="checkbox"  id="video"> <label  for="video"> Video Editing</label> 
+                    <input name="skills[]" type="checkbox"  id="graphic"> <label  for="graphic">  Graphic Design </label> 
+                    <input name="skills[]" type="checkbox"  id="sound"><label for="sound">  Sound Editing </label> 
+                    <input name="skills[]" type="checkbox" id="livestream"> <label for="livestream"> Live Streaming </label> 
+                    <input name="skills[]" type="checkbox"  id="photo"> <label  for="photo"> Photo Editing </label> 
+                    <input name="skills[]" type="checkbox"  id="camera"><label for="camera">  Camera Handling </label> 
+                    <input name="skills[]" type="checkbox"  id="media"><label  for="media">  Media Set-up </label> 
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Commitment Level (1 - Least, 5 - Most)</label><br>
+                    <input type="radio" name="commitment"> 5
+                    <input type="radio" name="commitment"> 4
+                    <input type="radio" name="commitment"> 3
+                    <input type="radio" name="commitment"> 2
+                    <input type="radio" name="commitment"> 1
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Upload Evidence of Payment</label>
+                    <input required type="file" class="form-control"  name="payment_proof">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script>
+        $(document).ready(function() {
+            $('form').on('submit', function(e) {
+                e.preventDefault(); // Prevent the default form submission
+
+                var formData = new FormData(this);
+
+                $.ajax({
+                    url: $(this).attr('action'),
+                    beforeSend: function() {
+                        $('button[type="submit"]').prop('disabled', true).text('Submitting...');
+                    },
+                    xhr: function() {
+                        var xhr = new window.XMLHttpRequest();
+                        xhr.upload.addEventListener('progress', function(e) {
+                            if (e.lengthComputable) {
+                                var percentComplete = (e.loaded / e.total) * 100;
+                                console.log('Upload progress: ' + percentComplete + '%');
+                            }
+                        }, false);
+                        return xhr;
+                    },
+                    complete: function() {
+                        $('button[type="submit"]').prop('disabled', false).text('Submit');
+                    },
+                    type: $(this).attr('method'),
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                     
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Form submitted successfully!',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        });
+                        $('form')[0].reset();
+                        console.log(response);
+                    },
+                    error: function(xhr, status, error) {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'An error occurred while submitting the form. Please try again.',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
