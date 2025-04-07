@@ -32,6 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $experience_details = isset($_POST['experience_details']) ? $_POST['experience_details'] : " ";
     $skills = isset($_POST['skills']) ? implode(", ", $_POST['skills']) : " ";
     $commitment = isset($_POST['commitment']) ? $_POST['commitment'] : " ";
+    $sponsorby = isset($_POST['sponsorby']) ? $_POST['sponsorby'] : " ";
+    $church = isset($_POST['church']) ? $_POST['church'] : " ";
 
     // Handle file upload
     $payment_proof = "";
@@ -59,8 +61,8 @@ if (isset($_FILES['payment_proof']) && $_FILES['payment_proof']['error'] == 0) {
 
 
     // Insert data into database
-    $stmt = $conn->prepare("INSERT INTO media_registrations (full_name, date_of_birth, gender, address, phone, email, experience, experience_details, skills, commitment, payment_proof) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssssssis", $full_name, $date_of_birth, $gender, $address, $phone, $email, $experience, $experience_details, $skills, $commitment, $payment_proof);
+    $stmt = $conn->prepare("INSERT INTO media_registrations (full_name, date_of_birth, gender, address, phone, email, experience, experience_details, skills, commitment, payment_proof ,  church , sponsorby ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ? , ?)");
+    $stmt->bind_param("sssssssssisss", $full_name, $date_of_birth, $gender, $address, $phone, $email, $experience, $experience_details, $skills, $commitment, $payment_proof ,  $church , $sponsorby );
 
     if ($stmt->execute()) {
         echo "Registration successful!";

@@ -37,51 +37,71 @@
         <div class="form-container"> 
             <div align="center"> <a  href="/"> <img src="icon.png" style="display: block; margin: 0 auto;"/> </a> </div>
             <h3 class="header">MEDIA SKILL ACQUISITION</h3>
-            <p class="text-center">Registration Form</p>
+            <h3  align="center" >RCCG EKITI PROVINCE 1</h3>
+            <p class="text-center"><h3  align="center"> Registration Form </h3></p>
             
             <div class="bank-details">
                 <h5>Bank Payment Details</h5>
                 <p><strong>Bank Name:</strong> UBA Bank</p>
                 <p><strong>Account Name:</strong> Obafemi Emmmanuel</p>
                 <p><strong>Account Number:</strong> 2215314439 </p>
-                <p><strong>Amount:</strong> NGN 1000</p>
+                <p><strong>Registration Fee :</strong> NGN 1,000</p>
+                <p><strong>Enrolment Fee  : </strong>NGN  10,000</p>
+              
             </div>
             
             <form  method="post"   action="submit.php"  enctype="multipart/form-data" >
                 <div class="mb-3">
-                    <label class="form-label">Full Name</label>
+                    <label class="form-label"><strong> Full Name </strong></label>
                     <input required  name="full_name" type="text" class="form-control">
                 </div>
                 
                 <div class="mb-3 row">
-                    <div class="col">
+                     <div class="col">
                         <label class="form-label">Date of Birth</label>
                         <input  name="date_of_birth" type="date" class="form-control">
-                    </div>
+                    </div> 
                     <div class="col">
-                        <label class="form-label">Gender</label><br>
-                        <input     value="Male"   type="radio" name="gender"> Male
-                        <input   value="Female" type="radio" name="gender"> Female
+                        <label class="form-label"><strong> Gender </strong></label><br>
+                        <input     value="Male"   type="radio" name="gender" id="gender_male">  <label  for="gender_male">Male</label>
+                        <input   value="Female" type="radio" name="gender"  id="gender_female"> <label for="gender_female">Female</label>                     
+                    
                     </div>
                 </div>
                 
                 <div class="mb-3">
-                    <label class="form-label">Address</label>
+                    <label class="form-label"><strong> Address </strong></label>
                     <input   name="address" type="text" class="form-control">
+
                 </div>
+
+                <div class="mb-3">
+                    <label class="form-label"> <strong>Church Name </strong>  </label>
+                    <input   name="church" type="text" class="form-control">
+                    
+                </div>
+                <br/>
+
+                <h5><strong> Sponsor: </strong></h5>
+                <div class="mb-3">
+                    <label class="form-label"></label>
+                    <input  value="church" type="radio" name="sponsorby"  id="yese">  <label for="yese">Church</label> 
+                    <input value="Individual Sponsor" type="radio" name="sponsorby" id="individual_sponsor"> <label for="individual_sponsor">Individual Sponsor</label>
+                </div>  
+                <br/>
                 
                 <div class="mb-3 row">
                     <div class="col">
-                        <label class="form-label">Phone Number</label>
+                        <label class="form-label"><strong>Phone Number </strong></label>
                         <input required  name="phone" type="text" class="form-control">
                     </div>
                     <div class="col">
-                        <label class="form-label">Email Address</label>
+                        <label class="form-label"><strong> Email Address </strong></label>
                         <input required  name="email" type="email" class="form-control">
                     </div>
                 </div>
               
-                <h5>Media Skills & Interest</h5>
+                <h5><strong> Media Skills & Interest </strong></h5>
                 <div class="mb-3">
                     <label class="form-label">Do you have prior experience in media?</label>
                     <input  value="Yes" type="radio" name="experience"  id="yese">  <label for="yese"> Yes</label> 
@@ -89,19 +109,19 @@
                 </div>  
                 
                 <div class="mb-3">
-                    <label class="form-label">If yes, please specify</label>
+                    <label class="form-label"> <strong> If yes, please specify </strong></label>
                     <textarea    name="experience_details" type="text" class="form-control"></textarea> 
                 </div>
                 
                 <div class="mb-3">
-                    <label class="form-label">Which media skills are you interested in learning?</label><br>
-                    <input name="skills[]"  type="checkbox"  id="video"> <label  for="video"> Video Editing</label> 
-                    <input name="skills[]" type="checkbox"  id="graphic"> <label  for="graphic">  Graphic Design </label> 
-                    <input name="skills[]" type="checkbox"  id="sound"><label for="sound">  Sound Editing </label> 
-                    <input name="skills[]" type="checkbox" id="livestream"> <label for="livestream"> Live Streaming </label> 
-                    <input name="skills[]" type="checkbox"  id="photo"> <label  for="photo"> Photo Editing </label> 
-                    <input name="skills[]" type="checkbox"  id="camera"><label for="camera">  Camera Handling </label> 
-                    <input name="skills[]" type="checkbox"  id="media"><label  for="media">  Media Set-up </label> 
+                    <label class="form-label"> <strong> Which media skills are you interested in learning? </strong>  </label><br>
+                    <input name="skills[]"  type="checkbox"  value="Video Editing"  id="video"> <label  for="video"> Video Editing</label> 
+                    <input name="skills[]" type="checkbox"  value="Graphic Design" id="graphic"> <label  for="graphic">  Graphic Design </label> 
+                    <input name="skills[]" type="checkbox"  value="Sound Editing " id="sound"><label for="sound">  Sound Editing </label> 
+                    <input name="skills[]" type="checkbox" value="Live Streaming" id="livestream"> <label for="livestream"> Live Streaming </label> 
+                    <input name="skills[]" type="checkbox"  value=" Photo Editing " id="photo"> <label  for="photo"> Photo Editing </label> 
+                    <input name="skills[]" type="checkbox" value="Camera Handling"  id="camera"><label for="camera">  Camera Handling </label> 
+                    <input name="skills[]" type="checkbox" value="Media Set-up" id="media"><label  for="media">  Media Set-up </label> 
                 </div>
                 
                 <div class="mb-3">
