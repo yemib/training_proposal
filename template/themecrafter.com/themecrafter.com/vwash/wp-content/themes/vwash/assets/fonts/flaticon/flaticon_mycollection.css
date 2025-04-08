@@ -1,0 +1,365 @@
+/*!
+*    ______ _       _   _
+*    |  ____| |     | | (_)
+*    | |__  | | __ _| |_ _  ___ ___  _ __
+*    |  __| | |/ _` | __| |/ __/ _ \| '_ \
+*    | |    | | (_| | |_| | (_| (_) | | | |
+*    |_|    |_|\__,_|\__|_|\___\___/|_| |_|
+*
+*         https://www.flaticon.com
+*/
+
+@font-face {
+    font-family: "flaticon_mycollection";
+    src: url("./flaticon_mycollection.woff2?3e727fed2a8a2d17d18c09c279d22351") format("woff2"),
+url("./flaticon_mycollection.woff?3e727fed2a8a2d17d18c09c279d22351") format("woff"),
+url("./flaticon_mycollection.eot?3e727fed2a8a2d17d18c09c279d22351#iefix") format("embedded-opentype"),
+url("./flaticon_mycollection.ttf?3e727fed2a8a2d17d18c09c279d22351") format("truetype"),
+url("./flaticon_mycollection.svg?3e727fed2a8a2d17d18c09c279d22351#flaticon_mycollection") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: inherit !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-search-interface-symbol:before {
+    content: "\f101";
+}
+.flaticon-check-mark:before {
+    content: "\f102";
+}
+.flaticon-right-quote:before {
+    content: "\f103";
+}
+.flaticon-place:before {
+    content: "\f104";
+}
+.flaticon-dollar:before {
+    content: "\f105";
+}
+.flaticon-car:before {
+    content: "\f106";
+}
+.flaticon-incomming-call:before {
+    content: "\f107";
+}
+.flaticon-email:before {
+    content: "\f108";
+}
+.flaticon-email-1:before {
+    content: "\f109";
+}
+.flaticon-loupe:before {
+    content: "\f10a";
+}
+.flaticon-car-wash:before {
+    content: "\f10b";
+}
+.flaticon-car-wash-1:before {
+    content: "\f10c";
+}
+.flaticon-folder:before {
+    content: "\f10d";
+}
+.flaticon-vehicle:before {
+    content: "\f10e";
+}
+.flaticon-car-wash-2:before {
+    content: "\f10f";
+}
+.flaticon-tag:before {
+    content: "\f110";
+}
+.flaticon-car-wash-3:before {
+    content: "\f111";
+}
+.flaticon-car-service:before {
+    content: "\f112";
+}
+.flaticon-car-service-1:before {
+    content: "\f113";
+}
+.flaticon-glass-cleaning:before {
+    content: "\f114";
+}
+.flaticon-car-service-2:before {
+    content: "\f115";
+}
+.flaticon-car-service-3:before {
+    content: "\f116";
+}
+.flaticon-brush:before {
+    content: "\f117";
+}
+.flaticon-mat:before {
+    content: "\f118";
+}
+.flaticon-car-service-4:before {
+    content: "\f119";
+}
+.flaticon-seat:before {
+    content: "\f11a";
+}
+.flaticon-car-wash-4:before {
+    content: "\f11b";
+}
+.flaticon-clock:before {
+    content: "\f11c";
+}
+.flaticon-invoice:before {
+    content: "\f11d";
+}
+.flaticon-wiper:before {
+    content: "\f11e";
+}
+.flaticon-car-wash-5:before {
+    content: "\f11f";
+}
+.flaticon-car-wash-6:before {
+    content: "\f120";
+}
+.flaticon-car-1:before {
+    content: "\f121";
+}
+.flaticon-speech-bubble:before {
+    content: "\f122";
+}
+.flaticon-vacuum-cleaner:before {
+    content: "\f123";
+}
+.flaticon-cleaner:before {
+    content: "\f124";
+}
+.flaticon-car-wash-7:before {
+    content: "\f125";
+}
+.flaticon-quick:before {
+    content: "\f126";
+}
+.flaticon-vacuum-cleaner-1:before {
+    content: "\f127";
+}
+.flaticon-car-wash-8:before {
+    content: "\f128";
+}
+.flaticon-car-wash-9:before {
+    content: "\f129";
+}
+.flaticon-calendar:before {
+    content: "\f12a";
+}
+.flaticon-download:before {
+    content: "\f12b";
+}
+.flaticon-location:before {
+    content: "\f12c";
+}
+.flaticon-phone-call:before {
+    content: "\f12d";
+}
+.flaticon-back:before {
+    content: "\f12e";
+}
+.flaticon-next:before {
+    content: "\f12f";
+}
+.flaticon-automotive:before {
+    content: "\f130";
+}
+.flaticon-time:before {
+    content: "\f131";
+}
+.flaticon-valet-parking:before {
+    content: "\f132";
+}
+.flaticon-maintenance:before {
+    content: "\f133";
+}
+.flaticon-car-wash-10:before {
+    content: "\f134";
+}
+.flaticon-engine:before {
+    content: "\f135";
+}
+.flaticon-interior:before {
+    content: "\f136";
+}
+.flaticon-pail:before {
+    content: "\f137";
+}
+.flaticon-plasticine:before {
+    content: "\f138";
+}
+.flaticon-car-seat:before {
+    content: "\f139";
+}
+.flaticon-promotion:before {
+    content: "\f13a";
+}
+.flaticon-window:before {
+    content: "\f13b";
+}
+.flaticon-car-wash-11:before {
+    content: "\f13c";
+}
+.flaticon-car-wash-12:before {
+    content: "\f13d";
+}
+.flaticon-taxi:before {
+    content: "\f13e";
+}
+.flaticon-washing:before {
+    content: "\f13f";
+}
+.flaticon-steering-wheel:before {
+    content: "\f140";
+}
+.flaticon-vacuum-cleaner-2:before {
+    content: "\f141";
+}
+.flaticon-spray-bottle:before {
+    content: "\f142";
+}
+.flaticon-truck:before {
+    content: "\f143";
+}
+.flaticon-cleanup:before {
+    content: "\f144";
+}
+.flaticon-cleaning:before {
+    content: "\f145";
+}
+.flaticon-car-wash-13:before {
+    content: "\f146";
+}
+.flaticon-car-wash-14:before {
+    content: "\f147";
+}
+.flaticon-clean:before {
+    content: "\f148";
+}
+.flaticon-pressure-washer:before {
+    content: "\f149";
+}
+.flaticon-car-wash-15:before {
+    content: "\f14a";
+}
+.flaticon-download-pdf:before {
+    content: "\f14b";
+}
+.flaticon-aerosol:before {
+    content: "\f14c";
+}
+.flaticon-up-right-arrow:before {
+    content: "\f14d";
+}
+.flaticon-car-wash-16:before {
+    content: "\f14e";
+}
+.flaticon-checklist:before {
+    content: "\f14f";
+}
+.flaticon-maintenance-1:before {
+    content: "\f150";
+}
+.flaticon-download-1:before {
+    content: "\f151";
+}
+.flaticon-dollar-coin:before {
+    content: "\f152";
+}
+.flaticon-mechanical:before {
+    content: "\f153";
+}
+.flaticon-car-2:before {
+    content: "\f154";
+}
+.flaticon-right-arrow:before {
+    content: "\f155";
+}
+.flaticon-car-wash-17:before {
+    content: "\f156";
+}
+.flaticon-car-insurance:before {
+    content: "\f157";
+}
+.flaticon-star:before {
+    content: "\f158";
+}
+.flaticon-left:before {
+    content: "\f159";
+}
+.flaticon-schedule:before {
+    content: "\f15a";
+}
+.flaticon-valet-parking-1:before {
+    content: "\f15b";
+}
+.flaticon-arrow-top:before {
+    content: "\f15c";
+}
+.flaticon-left-up:before {
+    content: "\f15d";
+}
+.flaticon-car-3:before {
+    content: "\f15e";
+}
+.flaticon-car-insurance-1:before {
+    content: "\f15f";
+}
+.flaticon-foam:before {
+    content: "\f160";
+}
+.flaticon-car-soap:before {
+    content: "\f161";
+}
+.flaticon-tire:before {
+    content: "\f162";
+}
+.flaticon-floor-mat:before {
+    content: "\f163";
+}
+.flaticon-rotating-brush:before {
+    content: "\f164";
+}
+.flaticon-car-window:before {
+    content: "\f165";
+}
+.flaticon-wash:before {
+    content: "\f166";
+}
+.flaticon-quote:before {
+    content: "\f167";
+}
+.flaticon-sponge:before {
+    content: "\f168";
+}
+.flaticon-roadside-assistance:before {
+    content: "\f169";
+}
+.flaticon-new:before {
+    content: "\f16a";
+}
+.flaticon-right-arrow-1:before {
+    content: "\f16b";
+}
+.flaticon-clean-car:before {
+    content: "\f16c";
+}
+.flaticon-quote-1:before {
+    content: "\f16d";
+}
+.flaticon-microfiber:before {
+    content: "\f16e";
+}
+.flaticon-pin-map:before {
+    content: "\f16f";
+}
+

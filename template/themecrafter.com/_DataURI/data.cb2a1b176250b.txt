@@ -1,0 +1,1 @@
+chrome-extension://ibkclpciafdglkjkcibmohobjkcfkaef/scripts/extractors.js
