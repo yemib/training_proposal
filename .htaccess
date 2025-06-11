@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Check if the domain is onetouch.codingpro.website
+RewriteCond %{HTTP_HOST} ^onetouch\.codingpro\.website$ [NC]
+
+# Redirect to ek1.onetouchmediatech.com while preserving the path and query string
+RewriteRule ^(.*)$ https://ek1.onetouchmediatech.com/$1 [R=301,L,QSA]
